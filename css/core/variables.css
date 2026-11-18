@@ -1,0 +1,62 @@
+/* =========================================================
+   variables.css — NÚCLEO DO CURRÍCULO
+   Retro-futurismo: marrom, laranja, amarelo e azul petróleo.
+   Fonte única de tokens do núcleo. As páginas autorais
+   (VMORDEKAI, RETEAR, FEITURA) declaram os próprios tokens
+   em css/projetos/<projeto>.css.
+========================================================= */
+
+:root{
+
+  /* ---------- Paleta núcleo ---------- */
+  --brown-950:#1c120b;
+  --brown-900:#2a1a10;
+  --brown-700:#4a2e1c;
+  --brown-500:#7a4a2a;
+
+  --orange:#e3702d;
+  --orange-hot:#f08a3c;
+
+  --yellow:#f2b632;
+  --yellow-pale:#f6d47a;
+
+  --petrol-deep:#072a31;
+  --petrol:#0e4a55;
+  --petrol-light:#2f7c86;
+
+  --cream:#f2e6cf;
+  --paper:#efe2c6;
+  --ink:#1d140d;
+  --ink-soft:rgba(29,20,13,.72);
+
+  /* ---------- Faixas retrô ---------- */
+  --stripes:
+    linear-gradient(
+      180deg,
+      var(--yellow) 0 25%,
+      var(--orange) 25% 50%,
+      var(--brown-500) 50% 75%,
+      var(--petrol) 75% 100%
+    );
+
+  /* ---------- Tipografia ---------- */
+  --font-display:"Chakra Petch", "IBM Plex Sans", system-ui, sans-serif;
+  --font-body:"IBM Plex Sans", system-ui, sans-serif;
+  --font-mono:"IBM Plex Mono", ui-monospace, monospace;
+
+  /* ---------- Estrutura ---------- */
+  --max-width:1240px;
+  --nav-height:84px;
+  --radius-s:10px;
+  --radius-m:18px;
+  --radius-l:28px;
+  --radius-pill:999px;
+
+  /* ---------- Sombras ---------- */
+  --shadow-hard:6px 6px 0 var(--brown-900);
+  --shadow-soft:0 24px 60px rgba(28,18,11,.18);
+
+  /* ---------- Movimento ---------- */
+  --ease:cubic-bezier(.19,1,.22,1);
+  --transition:all .5s var(--ease);
+}

@@ -1,0 +1,8 @@
+FONTE EXCLUSIVA DA FEITURA®
+
+Coloque aqui o arquivo da fonte identitária com o nome:
+
+  feitura.otf
+
+Ela é usada SOMENTE no wordmark (css/projetos/feitura.css, família "FEITURA-ID").
+Enquanto o arquivo não existir, o wordmark usa Libre Baskerville.

@@ -1,0 +1,145 @@
+/* =========================================================
+   base.css — reset, tipografia e utilitários do núcleo
+========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:var(--nav-height);
+}
+
+body{
+  font-family:var(--font-body);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font:inherit;
+}
+
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+
+/* ---------- Grão de papel (retrô) ---------- */
+
+.noise{
+  position:fixed;
+  inset:0;
+  z-index:2000;
+  pointer-events:none;
+  opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Tipografia ---------- */
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.22rem;
+  text-transform:uppercase;
+  color:var(--orange);
+}
+
+.eyebrow::before{
+  content:"";
+  width:28px;
+  height:8px;
+  border-radius:4px;
+  background:var(--stripes);
+}
+
+.display{
+  font-family:var(--font-display);
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:-.02em;
+  line-height:.98;
+}
+
+.section{
+  padding:7rem 0;
+  position:relative;
+}
+
+.section-head{
+  max-width:780px;
+  margin-bottom:3.5rem;
+}
+
+.section-head h2{
+  font-family:var(--font-display);
+  font-weight:700;
+  text-transform:uppercase;
+  font-size:clamp(2rem,4.2vw,3.4rem);
+  line-height:1;
+  margin:1rem 0 1.2rem;
+}
+
+.section-head p{
+  color:var(--ink-soft);
+  font-size:1.05rem;
+  max-width:680px;
+}
+
+/* ---------- Faixa divisória retrô ---------- */
+
+.stripe-band{
+  height:28px;
+  background:
+    linear-gradient(180deg,
+      var(--yellow) 0 25%,
+      var(--orange) 25% 50%,
+      var(--brown-500) 50% 75%,
+      var(--petrol) 75% 100%);
+}
+
+/* ---------- Revelação no scroll ---------- */
+
+.fade-up{
+  opacity:0;
+  transform:translateY(36px);
+  transition:opacity .9s var(--ease), transform .9s var(--ease);
+}
+
+.fade-up.active{
+  opacity:1;
+  transform:none;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{
+    animation:none !important;
+    transition:none !important;
+  }
+  .fade-up{
+    opacity:1;
+    transform:none;
+  }
+}

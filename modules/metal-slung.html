@@ -1,0 +1,64 @@
+<!-- =========================================================
+     RETEAR® — METAL-SLUNG HUD (liga metálica)
+     Evolução do antigo modules/metal-popup.html.
+     Fragmento carregado por js/projetos/retear.js.
+     Estilo: css/modules/metal-slung.css
+     Comportamento: js/modules/metal-slung.js
+     Caminhos de ícone relativos à página que carrega o módulo
+     (pages/*.html → ../assets/icon/hud/).
+========================================================== -->
+
+<div class="metal-slung" id="metalSlung" role="complementary" aria-label="HUD RETEAR: governança aplicada">
+
+  <!-- Filtro de fusão (metaball) -->
+  <svg width="0" height="0" aria-hidden="true" focusable="false">
+    <filter id="metal-goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 26 -11" result="goo"/>
+      <feBlend in="SourceGraphic" in2="goo"/>
+    </filter>
+  </svg>
+
+  <div class="metal-field">
+
+    <!-- Núcleo -->
+    <div class="metal-core metal-drag">
+      <div class="metal-sheen" aria-hidden="true"></div>
+      <div class="metal-grain" aria-hidden="true"></div>
+      <div class="metal-content">
+        <small>Liga de governança</small>
+        <h3>Frentes estruturais em operação.</h3>
+        <span>RETEAR®</span>
+      </div>
+    </div>
+
+    <!-- Nós acessórios -->
+    <div class="metal-node node-gov metal-drag" data-label="Governança">
+      <img src="../assets/icon/hud/governanca.svg" alt="Governança organizacional">
+    </div>
+
+    <div class="metal-node node-flow metal-drag" data-label="Processos">
+      <img src="../assets/icon/hud/fluxo.svg" alt="Fluxo de processos">
+    </div>
+
+    <div class="metal-node node-agent metal-drag" data-label="Agentes-IA">
+      <img src="../assets/icon/hud/agente.svg" alt="Agentes de IA">
+    </div>
+
+    <div class="metal-node node-sla metal-drag" data-label="SLA">
+      <img src="../assets/icon/hud/contrato.svg" alt="Contratos e termos de nível de serviço">
+    </div>
+
+  </div>
+
+  <canvas class="metal-particles" id="metalParticles" aria-hidden="true"></canvas>
+
+  <p class="metal-readout" id="metalReadout" aria-live="polite">arraste os módulos</p>
+
+  <button class="metal-close" id="metalClose" type="button" aria-label="Fechar HUD">×</button>
+
+</div>

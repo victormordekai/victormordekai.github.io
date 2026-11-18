@@ -1,0 +1,467 @@
+/* =========================================================
+   agentes.css — Agentes-IA com aderência a negócios
+   Variação do núcleo retrô com dominância azul petróleo:
+   ficha técnica, trilhos DT × DDD e diagrama de camadas.
+========================================================= */
+
+.page-agentes{
+  background:var(--paper);
+}
+
+/* ---------- Hero ---------- */
+
+.ag-hero{
+  position:relative;
+  min-height:92vh;
+  padding:calc(var(--nav-height) + 4rem) 0 5rem;
+  display:flex;
+  align-items:center;
+  background:
+    repeating-linear-gradient(180deg, rgba(255,255,255,.025) 0 2px, transparent 2px 6px),
+    radial-gradient(ellipse at 80% 20%, rgba(242,182,50,.18), transparent 50%),
+    var(--petrol-deep);
+  color:var(--cream);
+  overflow:hidden;
+}
+
+.ag-hero::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:16px;
+  background:var(--stripes);
+}
+
+.ag-hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr .9fr;
+  gap:3rem;
+  align-items:center;
+}
+
+.ag-hero .crumbs{
+  color:rgba(242,230,207,.6);
+  margin-bottom:1.4rem;
+}
+
+.ag-hero h1{
+  font-family:var(--font-display);
+  font-weight:700;
+  text-transform:uppercase;
+  font-size:clamp(2.4rem,5.4vw,4.6rem);
+  line-height:.98;
+  margin:1rem 0 1.4rem;
+}
+
+.ag-hero h1 em{
+  font-style:normal;
+  color:var(--yellow);
+}
+
+.ag-hero p{
+  max-width:600px;
+  color:rgba(242,230,207,.8);
+  font-size:1.05rem;
+}
+
+/* ---------- Ficha técnica ---------- */
+
+.spec{
+  border-radius:var(--radius-l);
+  background:var(--cream);
+  color:var(--ink);
+  border:3px solid var(--brown-900);
+  box-shadow:10px 10px 0 var(--orange);
+  overflow:hidden;
+}
+
+.spec-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 1.4rem;
+  background:var(--brown-900);
+  color:var(--yellow);
+  font-family:var(--font-mono);
+  font-size:.7rem;
+  letter-spacing:.16rem;
+  text-transform:uppercase;
+}
+
+.spec-head i{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#59d47a;
+  box-shadow:0 0 0 4px rgba(89,212,122,.2);
+  animation:blink 1.6s steps(1) infinite;
+}
+
+.spec dl{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:0;
+  font-size:.92rem;
+}
+
+.spec dt,
+.spec dd{
+  padding:.85rem 1.4rem;
+  border-bottom:1px dashed rgba(29,20,13,.18);
+}
+
+.spec dt{
+  font-family:var(--font-mono);
+  font-size:.68rem;
+  letter-spacing:.12rem;
+  text-transform:uppercase;
+  color:var(--brown-500);
+}
+
+.spec dd{
+  font-weight:500;
+}
+
+/* ---------- Trilhos DT × DDD ---------- */
+
+.rails-nav{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:.4rem;
+  margin-bottom:1.4rem;
+}
+
+.rails-nav button{
+  padding:.9rem .6rem;
+  border:2px solid var(--brown-900);
+  border-radius:var(--radius-s);
+  background:var(--cream);
+  font-family:var(--font-mono);
+  font-size:.66rem;
+  letter-spacing:.08rem;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:var(--transition);
+}
+
+.rails-nav button b{
+  display:block;
+  font-family:var(--font-display);
+  font-size:1.3rem;
+  letter-spacing:0;
+}
+
+.rails-nav button[aria-selected="true"]{
+  background:var(--petrol);
+  color:var(--cream);
+  border-color:var(--petrol);
+}
+
+.rails{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  border:2px solid var(--brown-900);
+  border-radius:var(--radius-l);
+  overflow:hidden;
+  box-shadow:var(--shadow-hard);
+}
+
+.rail{
+  padding:2rem;
+  min-height:240px;
+}
+
+.rail small{
+  font-family:var(--font-mono);
+  font-size:.66rem;
+  letter-spacing:.18rem;
+  text-transform:uppercase;
+}
+
+.rail h3{
+  font-family:var(--font-display);
+  text-transform:uppercase;
+  font-size:1.5rem;
+  line-height:1.05;
+  margin:.7rem 0 .9rem;
+}
+
+.rail p{
+  font-size:.95rem;
+}
+
+.rail-dt{ background:var(--yellow); color:var(--brown-950); }
+.rail-ddd{ background:var(--petrol); color:var(--cream); }
+.rail-out{ background:var(--brown-900); color:var(--cream); }
+.rail-out h3{ color:var(--orange-hot); }
+
+.rail [data-swap]{
+  transition:opacity .25s;
+}
+
+.rails.is-swapping [data-swap]{
+  opacity:0;
+}
+
+/* ---------- Princípios ---------- */
+
+.rules{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:1rem;
+}
+
+.rule{
+  padding:1.5rem;
+  border-radius:var(--radius-m);
+  background:var(--cream);
+  border:2px solid var(--brown-900);
+}
+
+.rule span{
+  font-family:var(--font-display);
+  font-size:2rem;
+  color:var(--orange);
+  line-height:1;
+}
+
+.rule b{
+  display:block;
+  font-family:var(--font-display);
+  text-transform:uppercase;
+  margin:.6rem 0 .4rem;
+}
+
+.rule p{
+  font-size:.88rem;
+  color:var(--ink-soft);
+}
+
+/* ---------- Arquitetura em camadas ---------- */
+
+.arch{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  align-items:stretch;
+  margin-top:2rem;
+}
+
+.plane{
+  position:relative;
+  padding:1.8rem;
+  border:2px solid var(--brown-900);
+  background:var(--cream);
+}
+
+.plane + .plane{
+  border-left:none;
+}
+
+.plane::after{
+  content:"→";
+  position:absolute;
+  right:-1.1rem;
+  top:50%;
+  transform:translateY(-50%);
+  width:2rem;
+  height:2rem;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--orange);
+  color:var(--brown-950);
+  font-weight:700;
+  z-index:2;
+}
+
+.plane:last-child::after{
+  display:none;
+}
+
+.plane small{
+  font-family:var(--font-mono);
+  font-size:.64rem;
+  letter-spacing:.16rem;
+  text-transform:uppercase;
+  color:var(--brown-500);
+}
+
+.plane b{
+  display:block;
+  font-family:var(--font-display);
+  text-transform:uppercase;
+  font-size:1.3rem;
+  margin:.4rem 0;
+}
+
+.plane p{
+  font-size:.9rem;
+  color:var(--ink-soft);
+}
+
+.plane.is-control{
+  background:var(--petrol);
+  color:var(--cream);
+}
+
+.plane.is-control small{ color:var(--yellow-pale); }
+.plane.is-control p{ color:rgba(242,230,207,.8); }
+
+.case-metrics{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+  margin-top:2rem;
+}
+
+.case-metrics div{
+  padding:1.4rem;
+  border-radius:var(--radius-m);
+  background:var(--brown-900);
+  color:var(--cream);
+}
+
+.case-metrics strong{
+  display:block;
+  font-family:var(--font-display);
+  font-size:2.4rem;
+  line-height:1;
+  color:var(--yellow);
+}
+
+.case-metrics span{
+  font-family:var(--font-mono);
+  font-size:.68rem;
+  letter-spacing:.1rem;
+  text-transform:uppercase;
+}
+
+/* ---------- Engenharia documental ---------- */
+
+.docs-section{
+  background:var(--brown-900);
+  color:var(--cream);
+}
+
+.docs-section .section-head p{
+  color:rgba(242,230,207,.75);
+}
+
+.doc-switch{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.6rem;
+  margin-bottom:1.6rem;
+}
+
+.doc-switch button{
+  padding:.8rem 1.2rem;
+  border-radius:var(--radius-pill);
+  border:1.5px solid rgba(242,230,207,.35);
+  background:transparent;
+  color:var(--cream);
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.12rem;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+.doc-switch button[aria-selected="true"]{
+  background:var(--orange);
+  border-color:var(--orange);
+  color:var(--brown-950);
+}
+
+.doc-sheet{
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:2.4rem;
+  padding:2.4rem;
+  border-radius:var(--radius-l);
+  background:var(--cream);
+  color:var(--ink);
+}
+
+.doc-sheet h3{
+  font-family:var(--font-display);
+  text-transform:uppercase;
+  font-size:1.8rem;
+  margin-bottom:.8rem;
+}
+
+.doc-sheet > div > p{
+  color:var(--ink-soft);
+}
+
+.doc-sheet ol{
+  list-style:none;
+  counter-reset:clause;
+  display:grid;
+  gap:.6rem;
+}
+
+.doc-sheet li{
+  counter-increment:clause;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:1rem;
+  padding:.85rem 1rem;
+  border-radius:var(--radius-s);
+  background:var(--paper);
+  border-left:4px solid var(--petrol);
+}
+
+.doc-sheet li::before{
+  content:"§" counter(clause);
+  font-family:var(--font-mono);
+  font-size:.78rem;
+  color:var(--orange);
+}
+
+.doc-note{
+  margin-top:1.4rem;
+  font-size:.82rem;
+  color:rgba(242,230,207,.6);
+}
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width:1100px){
+  .ag-hero-grid,
+  .doc-sheet{
+    grid-template-columns:1fr;
+  }
+  .rules{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .rails{
+    grid-template-columns:1fr;
+  }
+  .rails-nav{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media (max-width:760px){
+  .arch,
+  .case-metrics{
+    grid-template-columns:1fr;
+  }
+  .plane + .plane{
+    border-left:2px solid var(--brown-900);
+    border-top:none;
+  }
+  .plane::after{
+    right:50%;
+    top:auto;
+    bottom:-1.1rem;
+    transform:translateX(50%) rotate(90deg);
+  }
+  .rules{
+    grid-template-columns:1fr;
+  }
+}

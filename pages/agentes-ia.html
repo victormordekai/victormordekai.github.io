@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agentes-IA com aderência a negócios | Design Thinking × DDD — Victor Mordekai</title>
+
+  <meta name="description"
+  content="Desenvolvimento de agentes de IA com aderência a negócios: Design Thinking para entender o problema, Domain-Driven Design para modelar o domínio, governança para operar com segurança, e engenharia documental de contratos, memorandos e SLAs.">
+  <meta name="author" content="Victor Mordekai Ferreira">
+  <meta name="theme-color" content="#072a31">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/icon/vm-mark.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Núcleo -->
+  <link rel="stylesheet" href="../css/core/variables.css">
+  <link rel="stylesheet" href="../css/core/base.css">
+  <link rel="stylesheet" href="../css/core/navigation.css">
+  <link rel="stylesheet" href="../css/core/components.css">
+  <link rel="stylesheet" href="../css/core/footer.css">
+  <link rel="stylesheet" href="../css/core/responsive.css">
+
+  <!-- ID visual do projeto -->
+  <link rel="stylesheet" href="../css/projetos/agentes.css">
+
+</head>
+
+<body class="page-agentes">
+
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- NAV (estrutura RETEAR®) -->
+  <header class="nav" id="navbar">
+    <div class="container nav-inner">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+      <a href="../index.html" class="logo">
+        <img src="../assets/icon/vm-mark.svg" alt="" class="logo-symbol">
+        <span class="logo-text">
+          <span class="name">Agentes-IA</span>
+          <span class="sub">Design Thinking × DDD</span>
+        </span>
+      </a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Navegação">
+        <a href="../index.html">Currículo</a>
+        <a href="#metodo">Método</a>
+        <a href="#governanca">Governança</a>
+        <a href="#documentos">Documentos</a>
+        <a href="matriz-aderencia.html" class="nav-cta">Matriz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="ag-hero">
+      <div class="container ag-hero-grid">
+
+        <div class="fade-up">
+          <nav class="crumbs" aria-label="Trilha">
+            <a href="../index.html">Currículo</a><span aria-hidden="true">/</span>
+            <a href="../index.html#projetos">Projetos autorais</a><span aria-hidden="true">/</span>
+            <span>Agentes-IA</span>
+          </nav>
+          <span class="eyebrow">Desenvolvimento de agentes-IA</span>
+          <h1>Agentes com <em>aderência</em> ao negócio.</h1>
+          <p>
+            Um agente útil começa no domínio, não no modelo. Uso Design Thinking para entender o
+            problema com quem opera, Domain-Driven Design para traduzir o negócio em regras e contratos,
+            e governança para que cada agente opere de forma rastreável, com permissões mínimas e
+            homologação por evidência.
+          </p>
+        </div>
+
+        <aside class="spec fade-up" aria-label="Ficha técnica">
+          <div class="spec-head"><span>ficha · agente de negócio</span><i aria-hidden="true"></i></div>
+          <dl>
+            <dt>Método</dt><dd>Design Thinking × Domain-Driven Design</dd>
+            <dt>Papel</dt><dd>Ferramenta de apoio, nunca decisor final</dd>
+            <dt>Acesso</dt><dd>Menor privilégio, só se cadastrado</dd>
+            <dt>Registro</dt><dd>Cada execução rastreável</dd>
+            <dt>Entrada</dt><dd>Contratos de dados padronizados</dd>
+            <dt>Aceite</dt><dd>Homologação por evidência</dd>
+            <dt>Prompt</dt><dd>Versionado, com regras explícitas</dd>
+          </dl>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- MÉTODO DT × DDD -->
+    <section class="section" id="metodo">
+      <div class="container">
+
+        <div class="section-head fade-up">
+          <span class="eyebrow">Método</span>
+          <h2>Dois trilhos, uma entrega.</h2>
+          <p>Cada etapa do Design Thinking tem um artefato correspondente de Domain-Driven Design e uma saída concreta. Navegue pelas seis etapas.</p>
+        </div>
+
+        <div class="rails-nav" role="tablist" aria-label="Etapas do método">
+          <button role="tab" aria-selected="true"><b>01</b>Imersão</button>
+          <button role="tab" aria-selected="false"><b>02</b>Síntese</button>
+          <button role="tab" aria-selected="false"><b>03</b>Ideação</button>
+          <button role="tab" aria-selected="false"><b>04</b>Protótipo</button>
+          <button role="tab" aria-selected="false"><b>05</b>Teste</button>
+          <button role="tab" aria-selected="false"><b>06</b>Operação</button>
+        </div>
+
+        <div class="rails" role="tabpanel" aria-live="polite">
+          <div class="rail rail-dt">
+            <small>Design Thinking</small>
+            <h3 id="dt-title" data-swap>Imersão</h3>
+            <p id="dt-text" data-swap></p>
+          </div>
+          <div class="rail rail-ddd">
+            <small>Domain-Driven Design</small>
+            <h3 id="ddd-title" data-swap>Linguagem ubíqua</h3>
+            <p id="ddd-text" data-swap></p>
+          </div>
+          <div class="rail rail-out">
+            <small>Saída</small>
+            <h3 id="out-title" data-swap>Mapa do problema</h3>
+            <p id="out-text" data-swap></p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GOVERNANÇA DE AGENTES -->
+    <section class="section" id="governanca" style="background:var(--cream)">
+      <div class="container">
+
+        <div class="section-head fade-up">
+          <span class="eyebrow">Governança de agentes</span>
+          <h2>Regras antes do prompt.</h2>
+          <p>Princípios que aplico para que um agente seja útil sem virar risco.</p>
+        </div>
+
+        <div class="rules">
+          <article class="rule fade-up"><span>01</span><b>Ferramenta</b><p>O agente apoia a decisão; quem decide é uma pessoa com alçada.</p></article>
+          <article class="rule fade-up"><span>02</span><b>Cadastro</b><p>Só opera agente cadastrado, com escopo e responsável definidos.</p></article>
+          <article class="rule fade-up"><span>03</span><b>Menor privilégio</b><p>Acesso apenas ao que a tarefa exige, nada além.</p></article>
+          <article class="rule fade-up"><span>04</span><b>Escrita coordenada</b><p>Registros oficiais só mudam por um ponto de escrita controlado.</p></article>
+          <article class="rule fade-up"><span>05</span><b>Evidência</b><p>Entrega homologada por quem não a executou, com evidência registrada.</p></article>
+        </div>
+
+        <div class="section-head fade-up" style="margin:5rem 0 0">
+          <span class="eyebrow">Arquitetura aplicada</span>
+          <h2 style="font-size:clamp(1.6rem,3vw,2.4rem)">Interface → controle → dado oficial.</h2>
+          <p>A camada de controle valida, autoriza e registra antes que qualquer agente ou interface toque nos dados oficiais.</p>
+        </div>
+
+        <div class="arch fade-up">
+          <div class="plane"><small>Experiência</small><b>Interface</b><p>Telas, formulários e agentes que conversam com o usuário.</p></div>
+          <div class="plane is-control"><small>Controle</small><b>Validação</b><p>Autoriza, aplica regras de negócio e preserva a integridade.</p></div>
+          <div class="plane"><small>Dados</small><b>Dado oficial</b><p>Registro único, versionado e rastreável.</p></div>
+        </div>
+
+        <div class="case-metrics fade-up" aria-label="Case em operação">
+          <div><strong>3</strong><span>agentes-IA em operação</span></div>
+          <div><strong>6</strong><span>módulos do sistema em uso</span></div>
+          <div><strong>95%</strong><span>processos rastreáveis</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ENGENHARIA DOCUMENTAL -->
+    <section class="section docs-section" id="documentos">
+      <div class="container">
+
+        <div class="section-head fade-up">
+          <span class="eyebrow">Engenharia documental</span>
+          <h2>Contratos, memorandos e SLAs.</h2>
+          <p>O mesmo rigor de modelagem vale para os documentos que regem serviços e parcerias. Veja a estrutura que uso em cada tipo.</p>
+        </div>
+
+        <div class="doc-switch" role="tablist" aria-label="Tipo de documento">
+          <button role="tab" data-doc="contrato" aria-selected="true">Contrato</button>
+          <button role="tab" data-doc="memorando" aria-selected="false">Memorando</button>
+          <button role="tab" data-doc="sla" aria-selected="false">SLA</button>
+        </div>
+
+        <div class="doc-sheet" role="tabpanel" aria-live="polite">
+          <div>
+            <h3 id="doc-title">Contrato</h3>
+            <p id="doc-text"></p>
+          </div>
+          <ol id="doc-list"></ol>
+        </div>
+
+        <p class="doc-note">Estruturas de referência. Cada documento é adaptado ao caso e, quando houver efeito jurídico, revisado por profissional habilitado.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (estrutura RETEAR®) -->
+  <footer>
+    <div class="container footer-inner">
+      <p>
+        <strong>Agentes-IA · Victor Mordekai</strong><br>
+        © <span data-year>2026</span> — Método e conteúdos protegidos por direitos autorais.
+      </p>
+      <nav class="footer-links" aria-label="Projetos">
+        <a href="../index.html">Currículo</a>
+        <a href="retear.html">RETEAR®</a>
+        <a href="feitura.html">FEITURA®</a>
+        <a href="matriz-aderencia.html">Matriz de Aderência</a>
+      </nav>
+      <a href="matriz-aderencia.html" class="btn btn-primary">Ver a Matriz →</a>
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/projetos/agentes.js"></script>
+
+</body>
+</html>

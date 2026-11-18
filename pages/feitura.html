@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FEITURA® | Frente de convergência VMORDEKAI® × RETEAR® — Victor Mordekai</title>
+
+  <meta name="description"
+  content="FEITURA®: projeto de convergência entre pesquisa e design da VMORDEKAI® e arquitetura, metodologia e governança da RETEAR®, implementado em HTML, CSS e JavaScript.">
+  <meta name="author" content="Victor Mordekai Ferreira">
+  <meta name="theme-color" content="#252d25">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/icon/vm-mark.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Núcleo -->
+  <link rel="stylesheet" href="../css/core/variables.css">
+  <link rel="stylesheet" href="../css/core/base.css">
+  <link rel="stylesheet" href="../css/core/navigation.css">
+  <link rel="stylesheet" href="../css/core/components.css">
+  <link rel="stylesheet" href="../css/core/footer.css">
+  <link rel="stylesheet" href="../css/core/responsive.css">
+
+  <!-- ID visual do projeto -->
+  <link rel="stylesheet" href="../css/projetos/feitura.css">
+
+</head>
+
+<body class="page-feitura">
+
+  <!-- NAV (estrutura RETEAR®) -->
+  <header class="nav" id="navbar">
+    <div class="container nav-inner">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+      <a href="../index.html" class="logo">
+        <img src="../assets/icon/vm-mark.svg" alt="" class="logo-symbol">
+        <span class="logo-text">
+          <span class="name">FEITURA®</span>
+          <span class="sub">Frente de convergência</span>
+        </span>
+      </a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Navegação">
+        <a href="../index.html">Currículo</a>
+        <a href="#hierarquia">Hierarquia</a>
+        <a href="#anatomia">Anatomia</a>
+        <a href="vmordekai.html">VMORDEKAI®</a>
+        <a href="retear.html" class="nav-cta">RETEAR®</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="ft-hero">
+      <div class="container ft-hero-inner fade-up">
+
+        <nav class="crumbs" aria-label="Trilha">
+          <a href="../index.html">Currículo</a><span aria-hidden="true">/</span>
+          <a href="retear.html">RETEAR®</a><span aria-hidden="true">/</span>
+          <span>FEITURA®</span>
+        </nav>
+
+        <h1 class="ft-wordmark">FEITURA®</h1>
+        <p class="ft-sub">Pesquisa · design · método · governança · implementação</p>
+
+        <p>
+          A FEITURA® nasce na VMORDEKAI®, em sua origem e pesquisa, e se estrutura na RETEAR®,
+          em sua arquitetura, metodologia e governança. É o exemplo de como uma frente estrutural
+          sai do conceito e chega à implementação tecnológica.
+        </p>
+
+        <img class="ft-retear-logo"
+             src="https://victormordekai.github.io/RE-TEAR/assets/logo/logo.png"
+             onerror="this.remove()"
+             alt="RETEAR®">
+
+      </div>
+    </section>
+
+    <!-- HIERARQUIA -->
+    <section class="ft-section" id="hierarquia">
+      <div class="container">
+
+        <div class="ft-head fade-up">
+          <span class="ft-kicker">Hierarquia</span>
+          <h2>Duas origens, uma frente.</h2>
+          <p>VMORDEKAI® e RETEAR® são ecossistemas independentes e horizontalmente complementares. A FEITURA® articula os dois.</p>
+        </div>
+
+        <div class="ft-tree fade-up">
+          <div class="ft-node" data-node="vmordekai">
+            <small>Origem e pesquisa</small>
+            <b>VMORDEKAI®</b>
+            <p>Design, desenvolvimento de produto, branding e produção têxtil.</p>
+          </div>
+          <div class="ft-arrow" aria-hidden="true">→ ←</div>
+          <div class="ft-node" data-node="retear">
+            <small>Arquitetura, metodologia e governança</small>
+            <b>RETEAR®</b>
+            <p>Gestão, rastreabilidade, automação progressiva e infraestrutura organizacional.</p>
+          </div>
+          <div class="ft-node center" data-node="feitura">
+            <small>Frente de convergência</small>
+            <b>FEITURA®</b>
+            <p>Pesquisa, design, arquitetura metodológica, governança e implementação.</p>
+          </div>
+          <div class="ft-down" aria-hidden="true">↓</div>
+          <div class="ft-node out" data-node="tecnologia">
+            <small>Implementação tecnológica</small>
+            <b>HTML · CSS · JavaScript</b>
+            <p>Publicação estática no GitHub Pages.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ANATOMIA -->
+    <section class="ft-section" id="anatomia" style="padding-top:0">
+      <div class="container">
+
+        <div class="ft-head fade-up">
+          <span class="ft-kicker">Anatomia de uma frente estrutural</span>
+          <h2>Cada frente tem o próprio framework.</h2>
+          <p>Abra cada camada para ver o que ela define e de qual ecossistema ela vem.</p>
+        </div>
+
+        <div class="ft-layers">
+
+          <div class="ft-layer" data-origin="vmordekai">
+            <button aria-expanded="false"><h3>Pesquisa</h3><span class="origin">VMORDEKAI®</span></button>
+            <div class="body"><div>Investigação do contexto, do público e do problema. Base para que o design responda a uma necessidade real, e não a uma suposição.</div></div>
+          </div>
+
+          <div class="ft-layer" data-origin="vmordekai">
+            <button aria-expanded="false"><h3>Design</h3><span class="origin">VMORDEKAI®</span></button>
+            <div class="body"><div>Identidade, linguagem visual e experiência. A identidade tipográfica reserva a fonte exclusiva ao wordmark e usa DM Sans, DM Mono e Libre Baskerville no corpo e na interface.</div></div>
+          </div>
+
+          <div class="ft-layer" data-origin="retear">
+            <button aria-expanded="false"><h3>Arquitetura metodológica</h3><span class="origin">RETEAR®</span></button>
+            <div class="body"><div>O método que organiza a frente: problema produtivo, modelagem operacional, estruturação de dados e automação progressiva, nessa ordem.</div></div>
+          </div>
+
+          <div class="ft-layer" data-origin="retear">
+            <button aria-expanded="false"><h3>Governança</h3><span class="origin">RETEAR®</span></button>
+            <div class="body"><div>Regras, responsabilidades e critérios de decisão que mantêm a frente coerente ao longo do tempo, independentemente de quem a opera.</div></div>
+          </div>
+
+          <div class="ft-layer" data-origin="tecnologia feitura">
+            <button aria-expanded="false"><h3>Implementação tecnológica</h3><span class="origin">FEITURA®</span></button>
+            <div class="body"><div>HTML semântico, CSS e JavaScript publicados no GitHub Pages, com regras de responsividade que evitam sobreposições e preservam o alinhamento do texto.</div></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRINCÍPIOS -->
+    <section class="ft-section" style="padding-top:0">
+      <div class="container">
+        <div class="ft-principles">
+          <article class="fade-up"><b>Origem rastreável</b><p>Cada decisão da frente tem um ecossistema de origem identificável.</p></article>
+          <article class="fade-up"><b>Método antes de ferramenta</b><p>A tecnologia implementa o método; não o substitui.</p></article>
+          <article class="fade-up"><b>Identidade preservada</b><p>Regras tipográficas e de proporção valem em qualquer tela.</p></article>
+        </div>
+        <p style="margin-top:2.4rem"><a href="agentes-ia.html" class="ft-btn">Ver como aplico o método a agentes-IA →</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (estrutura RETEAR®) -->
+  <footer>
+    <div class="container footer-inner">
+      <p>
+        <strong>FEITURA®</strong><br>
+        © <span data-year>2026</span> — Frente de convergência VMORDEKAI® × RETEAR®. Conteúdos e identidade protegidos por direitos autorais.
+      </p>
+      <nav class="footer-links" aria-label="Projetos">
+        <a href="../index.html">Currículo</a>
+        <a href="vmordekai.html">VMORDEKAI®</a>
+        <a href="retear.html">RETEAR®</a>
+      </nav>
+      <a href="retear.html" class="btn btn-primary">Voltar à RETEAR®</a>
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/projetos/feitura.js"></script>
+
+</body>
+</html>

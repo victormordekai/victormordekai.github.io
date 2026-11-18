@@ -1,0 +1,56 @@
+/* =========================================================
+   footer.css — estrutura herdada da RETEAR®
+   (footer > .container.footer-inner)
+========================================================= */
+
+footer{
+  position:relative;
+  padding:4.5rem 0 3rem;
+  background:var(--brown-950);
+  color:rgba(242,230,207,.6);
+}
+
+footer::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:12px;
+  background:var(--stripes);
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:2.5rem;
+  flex-wrap:wrap;
+}
+
+.footer-inner p{
+  line-height:1.8;
+  max-width:480px;
+  font-size:.9rem;
+}
+
+.footer-inner strong{
+  color:var(--cream);
+  font-family:var(--font-display);
+  letter-spacing:.08rem;
+  text-transform:uppercase;
+}
+
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:.5rem;
+  font-family:var(--font-mono);
+  font-size:.76rem;
+  letter-spacing:.1rem;
+  text-transform:uppercase;
+}
+
+.footer-links a:hover{
+  color:var(--yellow);
+}

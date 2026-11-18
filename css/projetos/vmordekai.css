@@ -1,0 +1,400 @@
+/* =========================================================
+   vmordekai.css — ID visual VMORDEKAI®
+   Tokens espelhados de VMORDEKAI/css/tokens.css.
+   Estética editorial contemporânea, minimalista,
+   polígono da marca e paleta institucional.
+========================================================= */
+
+.page-vmordekai{
+  --vm-red:rgb(198,72,50);
+  --vm-red-dark:rgb(169,61,32);
+  --vm-purple:rgb(20,15,22);
+  --vm-blue:rgb(131,180,187);
+  --vm-white:rgb(255,255,255);
+  --vm-paper:rgb(245,245,242);
+  --vm-graphite:rgb(34,34,34);
+  --vm-muted:rgb(104,125,125);
+  --vm-line:rgba(20,15,22,.08);
+  --vm-shape:polygon(4% 0%, 90% 0%, 86% 50%, 96% 100%, 10% 100%, 14% 50%);
+  --vm-font:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --vm-ease:cubic-bezier(.2,.9,.25,1);
+
+  background:var(--vm-paper);
+  color:var(--vm-purple);
+  font-family:var(--vm-font);
+}
+
+/* ---------- Navbar na pele VMORDEKAI ---------- */
+
+.page-vmordekai .nav{
+  background:rgba(34,34,34,.94);
+  border-bottom:3px solid var(--vm-red);
+  border-image:none;
+}
+
+.page-vmordekai .logo-text{
+  font-family:var(--vm-font);
+}
+
+.page-vmordekai .logo-text .name{ letter-spacing:.3rem; }
+.page-vmordekai .logo-text .sub{ color:var(--vm-blue); }
+.page-vmordekai .nav-menu{ font-family:var(--vm-font); color:rgba(255,255,255,.8); }
+.page-vmordekai .nav-menu a:hover,
+.page-vmordekai .nav-menu a[aria-current="page"]{ color:var(--vm-white); }
+.page-vmordekai .nav-menu a::after{ background:var(--vm-red); }
+.page-vmordekai .nav-menu .nav-cta{ background:var(--vm-red); color:var(--vm-white); }
+.page-vmordekai .nav-menu .nav-cta:hover{ background:var(--vm-red-dark); color:var(--vm-white); }
+
+/* ---------- Tipografia editorial ---------- */
+
+.vm-tag{
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.2rem;
+  text-transform:uppercase;
+  color:var(--vm-red);
+}
+
+.vm-title{
+  font-weight:800;
+  letter-spacing:-.04em;
+  line-height:.92;
+}
+
+/* ---------- Hero ---------- */
+
+.vm-hero{
+  position:relative;
+  min-height:92vh;
+  padding:calc(var(--nav-height) + 3rem) 0 4rem;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+.vm-hero::before{
+  content:"";
+  position:absolute;
+  right:-8%;
+  top:12%;
+  width:56%;
+  height:76%;
+  background:var(--vm-blue);
+  opacity:.22;
+  clip-path:var(--vm-shape);
+}
+
+.vm-hero-grid{
+  position:relative;
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:4rem;
+  align-items:center;
+}
+
+.vm-hero h1{
+  font-size:clamp(3rem,8vw,7rem);
+  color:var(--vm-red);
+  margin:1rem 0 1.4rem;
+}
+
+.vm-hero .slogan{
+  font-size:clamp(1.2rem,2vw,1.6rem);
+  font-weight:300;
+  margin-bottom:1.4rem;
+}
+
+.vm-hero p{
+  max-width:540px;
+  color:rgba(20,15,22,.72);
+  line-height:1.8;
+}
+
+.vm-frame{
+  position:relative;
+  aspect-ratio:4/5;
+  clip-path:var(--vm-shape);
+  background:linear-gradient(160deg, var(--vm-red), var(--vm-purple));
+  overflow:hidden;
+}
+
+.vm-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:opacity .9s var(--vm-ease), transform 6s linear;
+}
+
+.vm-frame img.is-off{
+  opacity:0;
+}
+
+.vm-frame .fallback{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  color:var(--vm-white);
+  font-weight:800;
+  letter-spacing:.3rem;
+  font-size:1.4rem;
+}
+
+.vm-frame:hover img{
+  transform:scale(1.06);
+}
+
+.vm-crumbs{
+  margin-bottom:1.4rem;
+  color:var(--vm-muted);
+}
+
+/* ---------- Faixa de posicionamento ---------- */
+
+.vm-band{
+  background:var(--vm-purple);
+  color:var(--vm-white);
+  padding:5rem 0;
+}
+
+.vm-band-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:rgba(255,255,255,.1);
+}
+
+.vm-band-grid article{
+  background:var(--vm-purple);
+  padding:2rem 1.6rem;
+}
+
+.vm-band-grid b{
+  display:block;
+  font-size:1.2rem;
+  margin-bottom:.6rem;
+  color:var(--vm-blue);
+}
+
+.vm-band-grid p{
+  font-size:.92rem;
+  color:rgba(255,255,255,.72);
+  line-height:1.7;
+}
+
+/* ---------- Design Thinking (stepper) ---------- */
+
+.vm-section{
+  padding:7rem 0;
+}
+
+.vm-section h2{
+  font-size:clamp(2.2rem,4.6vw,3.8rem);
+  margin:1rem 0 1.4rem;
+}
+
+.vm-lead{
+  max-width:680px;
+  color:rgba(20,15,22,.7);
+  line-height:1.8;
+  margin-bottom:3rem;
+}
+
+.dt-steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:.6rem;
+  margin-bottom:1.6rem;
+}
+
+.dt-step{
+  position:relative;
+  padding:1.2rem 1rem 1.2rem 1.4rem;
+  border:none;
+  clip-path:polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%, 6% 50%);
+  background:rgba(20,15,22,.06);
+  color:var(--vm-purple);
+  text-align:left;
+  cursor:pointer;
+  transition:background .35s var(--vm-ease), color .35s;
+}
+
+.dt-step span{
+  display:block;
+  font-size:.66rem;
+  letter-spacing:.18rem;
+  text-transform:uppercase;
+  opacity:.6;
+}
+
+.dt-step b{
+  font-size:1.05rem;
+}
+
+.dt-step[aria-selected="true"]{
+  background:var(--vm-red);
+  color:var(--vm-white);
+}
+
+.dt-detail{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3rem;
+  padding:2.6rem;
+  background:var(--vm-white);
+  border:1px solid var(--vm-line);
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.dt-detail h3{
+  font-size:1.8rem;
+  margin-bottom:1rem;
+}
+
+.dt-detail p{
+  line-height:1.8;
+  color:rgba(20,15,22,.72);
+}
+
+.dt-detail ul{
+  list-style:none;
+  display:grid;
+  gap:.7rem;
+}
+
+.dt-detail li{
+  padding:.8rem 1rem;
+  border-left:3px solid var(--vm-blue);
+  background:var(--vm-paper);
+  font-size:.95rem;
+}
+
+.dt-source{
+  margin-top:1.4rem;
+  font-size:.8rem;
+  color:var(--vm-muted);
+}
+
+/* ---------- Vitrine ---------- */
+
+.vm-gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.2rem;
+}
+
+.vm-piece{
+  position:relative;
+  aspect-ratio:3/4;
+  overflow:hidden;
+  background:linear-gradient(160deg, var(--vm-blue), var(--vm-purple));
+}
+
+.vm-piece img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .9s var(--vm-ease);
+}
+
+.vm-piece:hover img{
+  transform:scale(1.07);
+}
+
+.vm-piece figcaption{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:1rem;
+  background:linear-gradient(transparent, rgba(20,15,22,.85));
+  color:var(--vm-white);
+  font-size:.78rem;
+  letter-spacing:.14rem;
+  text-transform:uppercase;
+}
+
+/* ---------- Ponte com a RETEAR ---------- */
+
+.vm-bridge{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:3rem;
+  align-items:center;
+  padding:3rem;
+  background:var(--vm-graphite);
+  color:var(--vm-white);
+  clip-path:polygon(0 0, 100% 0, 98% 100%, 2% 100%);
+}
+
+.vm-bridge p{
+  color:rgba(255,255,255,.72);
+  line-height:1.8;
+  margin-top:1rem;
+}
+
+.vm-btn{
+  display:inline-flex;
+  padding:1rem 1.6rem;
+  background:var(--vm-red);
+  color:var(--vm-white);
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.16rem;
+  text-transform:uppercase;
+  clip-path:polygon(4% 0, 100% 0, 96% 100%, 0 100%);
+  transition:background .3s;
+}
+
+.vm-btn:hover{
+  background:var(--vm-red-dark);
+}
+
+.vm-btn.ghost{
+  background:transparent;
+  color:var(--vm-white);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.4);
+  clip-path:none;
+}
+
+.vm-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+}
+
+/* ---------- Footer na pele VMORDEKAI ---------- */
+
+.page-vmordekai footer{ background:var(--vm-graphite); font-family:var(--vm-font); }
+.page-vmordekai footer::before{ background:var(--vm-red); height:4px; }
+.page-vmordekai .footer-links a:hover{ color:var(--vm-blue); }
+.page-vmordekai .footer-inner .btn{ background:var(--vm-red); border-color:var(--vm-red); color:#fff; box-shadow:none; }
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width:1000px){
+  .vm-hero-grid,
+  .dt-detail,
+  .vm-bridge{
+    grid-template-columns:1fr;
+  }
+  .vm-band-grid,
+  .vm-gallery,
+  .dt-steps{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .vm-frame{
+    max-width:420px;
+  }
+}
+
+@media (max-width:560px){
+  .vm-band-grid,
+  .vm-gallery{
+    grid-template-columns:1fr 1fr;
+  }
+  .dt-detail,
+  .vm-bridge{
+    padding:1.6rem;
+  }
+}

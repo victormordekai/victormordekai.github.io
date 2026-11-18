@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Matriz de Aderência | Engenharia de prompt para posicionamento profissional — Victor Mordekai</title>
+
+  <meta name="description"
+  content="Matriz de Aderência: sistema proprietário de engenharia de prompt que avalia a aderência real a cada vaga, aponta riscos de rejeição e reescreve o currículo sem inventar dados.">
+  <meta name="author" content="Victor Mordekai Ferreira">
+  <meta name="theme-color" content="#f2b632">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/icon/vm-mark.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Núcleo -->
+  <link rel="stylesheet" href="../css/core/variables.css">
+  <link rel="stylesheet" href="../css/core/base.css">
+  <link rel="stylesheet" href="../css/core/navigation.css">
+  <link rel="stylesheet" href="../css/core/components.css">
+  <link rel="stylesheet" href="../css/core/footer.css">
+  <link rel="stylesheet" href="../css/core/responsive.css">
+
+  <!-- ID visual do projeto -->
+  <link rel="stylesheet" href="../css/projetos/matriz.css">
+
+</head>
+
+<body class="page-matriz">
+
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- NAV (estrutura RETEAR®) -->
+  <header class="nav" id="navbar">
+    <div class="container nav-inner">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+      <a href="../index.html" class="logo">
+        <img src="../assets/icon/vm-mark.svg" alt="" class="logo-symbol">
+        <span class="logo-text">
+          <span class="name">Matriz de Aderência</span>
+          <span class="sub">Engenharia de prompt</span>
+        </span>
+      </a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Navegação">
+        <a href="../index.html">Currículo</a>
+        <a href="#demo">Demonstração</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#casos">Casos</a>
+        <a href="agentes-ia.html" class="nav-cta">Agentes-IA</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="mx-hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Trilha">
+          <a href="../index.html">Currículo</a><span aria-hidden="true">/</span>
+          <a href="agentes-ia.html">Agentes-IA</a><span aria-hidden="true">/</span>
+          <span>Matriz de Aderência</span>
+        </nav>
+        <span class="eyebrow">Sistema proprietário · engenharia de prompt</span>
+        <h1>Matriz de<br>Aderência</h1>
+        <p>
+          Um motor de posicionamento profissional orientado por IA. Em vez de embelezar currículos,
+          ele valida a aderência real a cada vaga, aponta riscos de rejeição sem suavizar e reescreve
+          o currículo apenas com fatos que têm lastro. Este site foi estruturado com ele.
+        </p>
+        <div class="mx-badges">
+          <span>12 módulos</span>
+          <span>ATS + leitura humana</span>
+          <span>Sem invenções</span>
+          <span>Diretriz crítica</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMONSTRAÇÃO -->
+    <section class="section" id="demo">
+      <div class="container">
+
+        <div class="section-head fade-up">
+          <span class="eyebrow">Demonstração simplificada</span>
+          <h2>Cole uma vaga. Veja o cruzamento.</h2>
+          <p>Uma amostra do primeiro filtro da Matriz: cruza a descrição com termos que têm lastro no meu perfil e com lacunas conhecidas. Roda no seu navegador; nada é enviado.</p>
+        </div>
+
+        <div class="mx-lab">
+
+          <div class="mx-input">
+            <label for="mx-text">Descrição da vaga</label>
+            <textarea id="mx-text" placeholder="Cole aqui responsabilidades, requisitos e diferenciais da vaga..."></textarea>
+            <div class="mx-controls">
+              <button class="btn btn-primary" id="mx-run" type="button">Analisar</button>
+              <button class="btn btn-secondary" id="mx-sample" type="button">Usar exemplo</button>
+            </div>
+          </div>
+
+          <div class="mx-output" aria-live="polite">
+
+            <div class="dial" aria-hidden="true">
+              <svg viewBox="0 0 300 165">
+                <path d="M20 150 A130 130 0 0 1 109.8 26.4" fill="none" stroke="#8a2f22" stroke-width="18"/>
+                <path d="M109.8 26.4 A130 130 0 0 1 226.4 44.8" fill="none" stroke="#e3702d" stroke-width="18"/>
+                <path d="M226.4 44.8 A130 130 0 0 1 280 150" fill="none" stroke="#2f6b3a" stroke-width="18"/>
+                <g id="dial-needle" class="dial-needle">
+                  <line x1="150" y1="150" x2="150" y2="38" stroke="#1c120b" stroke-width="5" stroke-linecap="round"/>
+                </g>
+                <circle cx="150" cy="150" r="12" fill="#1c120b"/>
+              </svg>
+              <div class="dial-value" id="dial-value">0%</div>
+            </div>
+
+            <p class="verdict" id="mx-verdict">Aguardando a descrição da vaga.</p>
+
+            <div class="mx-lists">
+              <div>
+                <h3>Com lastro no perfil</h3>
+                <div class="mx-chips ok" id="mx-ok"><span class="empty">—</span></div>
+              </div>
+              <div>
+                <h3>Lacunas detectadas</h3>
+                <div class="mx-chips gap" id="mx-gap"><span class="empty">—</span></div>
+              </div>
+            </div>
+
+            <p class="mx-alert" id="mx-alert" role="alert" hidden></p>
+
+            <p class="mx-disclaimer">Indicador de triagem por palavras-chave. A análise completa considera nível hierárquico, contexto, senioridade e critérios eliminatórios.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PIPELINE -->
+    <section class="section" id="pipeline" style="background:var(--cream)">
+      <div class="container">
+
+        <div class="section-head fade-up">
+          <span class="eyebrow">Arquitetura do prompt</span>
+          <h2>Pipeline em 12 módulos.</h2>
+          <p>Seis fases obrigatórias e seis módulos avançados. A regra central: não assumir que o candidato é aderente.</p>
+        </div>
+
+        <div class="pipeline">
+          <article class="module is-core fade-up"><b>Análise da vaga</b><p>Responsabilidades reais, nível implícito e critérios eliminatórios.</p></article>
+          <article class="module is-core fade-up"><b>Aderência</b><p>Alta, média ou baixa; direta, transferível e lacunas.</p></article>
+          <article class="module is-core fade-up"><b>Diagnóstico crítico</b><p>Riscos de rejeição, ruído, sobrequalificação e instabilidade.</p></article>
+          <article class="module is-core fade-up"><b>Estratégia</b><p>Narrativa dominante, versão do candidato e tom de comunicação.</p></article>
+          <article class="module is-core fade-up"><b>Currículo adaptado</b><p>ATS-friendly, leitura em 10–15 segundos e sem invenções.</p></article>
+          <article class="module is-core fade-up"><b>Otimização</b><p>Versão final, ajustes opcionais e argumentos de entrevista.</p></article>
+          <article class="module fade-up"><b>Candidatura</b><p>Mensagens para WhatsApp e e-mail alinhadas à vaga.</p></article>
+          <article class="module fade-up"><b>Entrevista</b><p>Dez perguntas prováveis com respostas estruturadas.</p></article>
+          <article class="module fade-up"><b>Probabilidade</b><p>Chance estimada e o que a aumentaria.</p></article>
+          <article class="module fade-up"><b>Pretensão salarial</b><p>Três cenários, CLT × PJ e análise de risco.</p></article>
+          <article class="module fade-up"><b>Abordagem</b><p>Esforço, canal e velocidade de ação.</p></article>
+          <article class="module fade-up"><b>Palavras-chave</b><p>Banco semântico ativado só com termos de lastro real.</p></article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CASOS -->
+    <section class="section" id="casos">
+      <div class="container">
+
+        <div class="section-head fade-up">
+          <span class="eyebrow">Casos de teste</span>
+          <h2>Rigor nos dois sentidos.</h2>
+          <p>A Matriz recomenda investir quando há aderência e recua quando não há. Dois testes reais com vagas de Curitiba:</p>
+        </div>
+
+        <div class="cases">
+          <article class="case fade-up">
+            <small>Gerente de Produção Têxtil</small>
+            <h3>Confecção em expansão</h3>
+            <ul>
+              <li>Aderência direta em PCP, confecção e gestão de equipes</li>
+              <li>Diferencial: experiência em estruturar produção internalizada</li>
+              <li>Risco apontado: percepção de instabilidade nas trocas recentes</li>
+            </ul>
+            <span class="level alta">Aderência alta · prioridade alta</span>
+          </article>
+          <article class="case fade-up">
+            <small>Gerente de Tecnologia da Informação</small>
+            <h3>Indústria de médio porte</h3>
+            <ul>
+              <li>Critério eliminatório sem lastro: ERP específico obrigatório</li>
+              <li>Lacunas declaradas, nada inventado no currículo</li>
+              <li>Recomendação: esforço baixo e abordagem direta ao recrutador</li>
+            </ul>
+            <span class="level baixa">Aderência baixa · prioridade baixa</span>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (estrutura RETEAR®) -->
+  <footer>
+    <div class="container footer-inner">
+      <p>
+        <strong>Matriz de Aderência</strong><br>
+        © <span data-year>2026</span> — Sistema proprietário de Victor Mordekai. Estrutura de prompt protegida por direitos autorais.
+      </p>
+      <nav class="footer-links" aria-label="Projetos">
+        <a href="../index.html">Currículo</a>
+        <a href="agentes-ia.html">Agentes-IA</a>
+        <a href="retear.html">RETEAR®</a>
+      </nav>
+      <a href="../index.html#contato" class="btn btn-primary">Falar comigo</a>
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/projetos/matriz.js"></script>
+
+</body>
+</html>

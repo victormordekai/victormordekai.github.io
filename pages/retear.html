@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RETEAR® | Governança e infraestrutura operacional — Victor Mordekai</title>
+
+  <meta name="description"
+  content="RETEAR®: ecossistema de gestão e inteligência organizacional para operações têxteis, com frentes estruturais de governança, abastecimento, transformação, mercado, materialização e regeneração.">
+  <meta name="author" content="Victor Mordekai Ferreira">
+  <meta name="theme-color" content="#060606">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/icon/vm-mark.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=IBM+Plex+Mono:wght@400;600&family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+  <!-- Núcleo -->
+  <link rel="stylesheet" href="../css/core/variables.css">
+  <link rel="stylesheet" href="../css/core/base.css">
+  <link rel="stylesheet" href="../css/core/navigation.css">
+  <link rel="stylesheet" href="../css/core/components.css">
+  <link rel="stylesheet" href="../css/core/footer.css">
+  <link rel="stylesheet" href="../css/core/responsive.css">
+
+  <!-- ID visual do projeto + módulo HUD -->
+  <link rel="stylesheet" href="../css/projetos/retear.css">
+  <link rel="stylesheet" href="../css/modules/metal-slung.css">
+
+</head>
+
+<body class="page-retear">
+
+  <!-- HUD metal-slung (carregado por js/projetos/retear.js) -->
+  <div id="metal-slung-root"></div>
+
+  <!-- NAV (estrutura original RETEAR®) -->
+  <header class="nav" id="navbar">
+    <div class="container nav-inner">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+      <a href="../index.html" class="logo">
+        <img src="https://victormordekai.github.io/RE-TEAR/assets/logo/logo-corpo.png" onerror="this.onerror=null;this.src='../assets/icon/vm-mark.svg'" alt="" class="logo-symbol">
+        <span class="logo-text"><span class="re">RE</span><span class="tear">TEAR®</span></span>
+      </a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Navegação">
+        <a href="../index.html">Currículo</a>
+        <a href="#frentes">Frentes</a>
+        <a href="#governanca">Governança</a>
+        <a href="feitura.html">FEITURA®</a>
+        <a href="https://victormordekai.github.io/RE-TEAR/" target="_blank" rel="noopener noreferrer" class="nav-cta">Site oficial</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="rt-hero">
+      <div class="rt-orb" id="rt-orb" aria-hidden="true"></div>
+      <div class="rt-grid" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="rt-hero-inner fade-up">
+          <nav class="crumbs" aria-label="Trilha">
+            <a href="../index.html">Currículo</a><span aria-hidden="true">/</span>
+            <a href="../index.html#projetos">Projetos autorais</a><span aria-hidden="true">/</span>
+            <span>RETEAR®</span>
+          </nav>
+          <small>Infraestrutura operacional humanizada</small>
+          <h1>Sistemas criam <b>continuidade</b>.</h1>
+          <p>
+            A RETEAR® é um ecossistema de gestão e inteligência organizacional que integra pessoas,
+            processos, tecnologia e gestão por meio de automação progressiva, rastreabilidade,
+            padronização, indicadores e interfaces inteligentes. Nasceu na indústria têxtil para
+            estruturar operações adaptáveis, rastreáveis e escaláveis.
+          </p>
+          <div class="rt-actions">
+            <a href="#frentes" class="rt-btn primary">Ver frentes estruturais</a>
+            <a href="#governanca" class="rt-btn ghost">Governança aplicada</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRENTES ESTRUTURAIS -->
+    <section class="rt-section" id="frentes">
+      <div class="container">
+
+        <div class="rt-head fade-up">
+          <span class="rt-kicker">Frentes estruturais do ecossistema RETEAR</span>
+          <h2>Uma arquitetura para estruturar organizações.</h2>
+          <p>
+            Cada frente estrutural atua sobre uma função crítica da organização e possui
+            internamente seu próprio framework operacional. Escolha um foco de leitura.
+          </p>
+        </div>
+
+        <div class="rt-focus" role="group" aria-label="Foco de leitura">
+          <button data-focus="todas" aria-pressed="true">Todas</button>
+          <button data-focus="governanca" aria-pressed="false">Governança</button>
+          <button data-focus="operacao" aria-pressed="false">Operação</button>
+          <button data-focus="mercado" aria-pressed="false">Mercado e produto</button>
+          <button data-focus="regeneracao" aria-pressed="false">Regeneração</button>
+        </div>
+
+        <div class="rt-fronts">
+
+          <article class="rt-front fade-up" data-focus="governanca">
+            <small>Frente de sustentação</small>
+            <h3>MALHA</h3>
+            <p>Mecanismos que sustentam a continuidade organizacional: governança, conformidade, gestão administrativa, recursos e inteligência decisória.</p>
+            <div class="rt-tags"><span>Governança</span><span>Administração</span><span>Compliance</span></div>
+          </article>
+
+          <article class="rt-front fade-up" data-focus="operacao">
+            <small>Frente de abastecimento</small>
+            <h3>LONA</h3>
+            <p>Fluxos de entrada da organização, com disponibilidade de recursos, materiais, parceiros e capacidade operacional previsível e rastreável.</p>
+            <div class="rt-tags"><span>Supply chain</span><span>Suprimentos</span><span>Fornecedores</span></div>
+          </article>
+
+          <article class="rt-front premium fade-up" data-focus="operacao governanca">
+            <small>Frente de transformação</small>
+            <h3>JACQUARD</h3>
+            <p>Mecanismos que convertem recursos em entregas: planejamento, execução, produtividade, qualidade e controle operacional.</p>
+            <div class="rt-tags"><span>Produção</span><span>Qualidade</span><span>Indicadores</span></div>
+          </article>
+
+          <article class="rt-front fade-up" data-focus="mercado">
+            <small>Frente de mercado</small>
+            <h3>DENIM</h3>
+            <p>Interação entre organização, clientes e mercado: inteligência comercial, relacionamento, posicionamento e crescimento sustentável.</p>
+            <div class="rt-tags"><span>Comercial</span><span>CRM</span><span>Mercado</span></div>
+          </article>
+
+          <article class="rt-front fade-up" data-focus="mercado">
+            <small>Frente de materialização</small>
+            <h3>GABARDINE</h3>
+            <p>Manifestação institucional: branding, experiência digital, interfaces e desenvolvimento visual-tecnológico.</p>
+            <div class="rt-tags"><span>Branding</span><span>UX/UI</span><span>Creative-tech</span></div>
+          </article>
+
+          <article class="rt-front fade-up" data-focus="regeneracao">
+            <small>Frente de regeneração</small>
+            <h3>RE-TEAR</h3>
+            <p>Regeneração organizacional, social, ambiental e produtiva: circularidade, reaproveitamento e desenvolvimento sustentável.</p>
+            <div class="rt-tags"><span>Circularidade</span><span>ESG aplicado</span><span>Logística reversa</span></div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GOVERNANÇA APLICADA -->
+    <section class="rt-section rt-dark" id="governanca">
+      <div class="container">
+
+        <div class="rt-head fade-up">
+          <span class="rt-kicker">Governança empresarial aplicada</span>
+          <h2>A tecnologia deve nascer da operação real.</h2>
+          <p>
+            Dois núcleos sustentam a RETEAR®: um estratégico, que define para onde a operação vai,
+            e um operacional, que transforma isso em rotina, dado e decisão.
+          </p>
+        </div>
+
+        <div class="rt-switch" role="tablist" aria-label="Núcleos">
+          <button role="tab" aria-selected="true" aria-controls="core-estrategico">Núcleo estratégico</button>
+          <button role="tab" aria-selected="false" aria-controls="core-operacional">Núcleo operacional</button>
+        </div>
+
+        <div class="rt-core" id="core-estrategico" role="tabpanel">
+          <div><b>Eficiência estrutural</b>Eficiência sustentável, redução de desperdícios e melhoria contínua.</div>
+          <div><b>Pessoas</b>Produtividade com qualidade de vida e ética nas relações de trabalho.</div>
+          <div><b>Conformidade</b>Normas Regulamentadoras (NRs), ESG e ODS como requisitos de projeto.</div>
+          <div><b>Impacto operacional</b>Ganhos medidos na operação, não apenas no papel.</div>
+          <div><b>Aperfeiçoamento sistêmico</b>Evolução contínua sem burocratização improdutiva.</div>
+          <div><b>Programa NR-1</b>Gestão de riscos psicossociais, comunicação organizacional e bem-estar ocupacional.</div>
+        </div>
+
+        <div class="rt-core" id="core-operacional" role="tabpanel" hidden>
+          <div><b>Sistemas próprios</b>Organização operacional sob medida para a realidade de cada empresa.</div>
+          <div><b>Planilhas complexas</b>Modelagem operacional aplicada à tomada de decisão.</div>
+          <div><b>Padronização de dados</b>Estrutura e categorização lógica para leitura confiável.</div>
+          <div><b>Rastreabilidade produtiva</b>Cada pedido e cada etapa com origem e estado conhecidos.</div>
+          <div><b>Leitura analítica</b>Processos transformados em indicadores e diagnóstico.</div>
+          <div><b>Automação progressiva</b>Automatizar só o que já está estruturado e estável.</div>
+        </div>
+
+        <div class="rt-flow fade-up" aria-label="Lógica de atuação">
+          <span>Problema produtivo</span>
+          <span>Modelagem operacional</span>
+          <span>Estruturação de dados</span>
+          <span>Automação progressiva</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FRENTE FILHA: FEITURA -->
+    <section class="rt-section">
+      <div class="container">
+        <div class="rt-child fade-up">
+          <div>
+            <span class="rt-kicker" style="color:#c7cdb8">Frente de convergência · método e governança RETEAR®</span>
+            <h2>FEITURA®</h2>
+            <p>
+              Projeto ligado à VMORDEKAI® em sua origem e pesquisa e à RETEAR® em sua arquitetura,
+              metodologia e governança. Um exemplo de como uma frente estrutural é construída
+              do conceito à implementação.
+            </p>
+          </div>
+          <div>
+            <a href="feitura.html" class="rt-btn primary">Abrir FEITURA®</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (estrutura original RETEAR®) -->
+  <footer>
+    <div class="container footer-inner">
+      <p>
+        <strong>RETEAR®</strong><br>
+        © <span data-year>2026</span> — Estrutura conceitual, identidade institucional, nomenclaturas,
+        frameworks operacionais e arquitetura estratégica protegidos por direitos autorais.
+      </p>
+      <p>
+        VMORDEKAI® Ecosystem Vision<br>
+        Curitiba — PR
+      </p>
+      <a href="https://victormordekai.github.io/RE-TEAR/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Conhecer RETEAR®</a>
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/modules/metal-slung.js"></script>
+  <script src="../js/projetos/retear.js"></script>
+
+</body>
+</html>
