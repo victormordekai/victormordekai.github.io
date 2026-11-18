@@ -1,0 +1,32 @@
+/* =========================================================
+   fonts.css — fontes identitárias das marcas
+   Uso exclusivo em wordmarks (nome da marca), nunca no corpo.
+   · VMORDEKAI-ID → assets/fonts/vmordekai.otf
+   · FEITURA-ID   → assets/fonts/feitura.otf
+========================================================= */
+
+@font-face{
+  font-family:"VMORDEKAI-ID";
+  src:url("../../assets/fonts/vmordekai.otf") format("opentype");
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"FEITURA-ID";
+  src:url("../../assets/fonts/feitura.otf") format("opentype");
+  font-display:swap;
+}
+
+.wm-vmordekai{
+  font-family:"VMORDEKAI-ID", var(--font-display) !important;
+  text-transform:none !important;
+  font-weight:400 !important;
+  letter-spacing:.02em !important;
+}
+
+.wm-feitura{
+  font-family:"FEITURA-ID", "Libre Baskerville", Georgia, serif !important;
+  text-transform:none !important;
+  font-weight:400 !important;
+  letter-spacing:.02em !important;
+}

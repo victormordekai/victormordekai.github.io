@@ -1,18 +1,11 @@
 /* =========================================================
    feitura.css — ID visual FEITURA®
    · fonte identitária exclusiva SOMENTE no wordmark
-     (coloque o arquivo em assets/fonts/feitura.otf;
-      enquanto ausente, usa Libre Baskerville)
+     (declarada em css/core/fonts.css → assets/fonts/feitura.otf)
    · corpo e interface: DM Sans, DM Mono, Libre Baskerville
    · olive #394337 / olive-dark #252d25
    · logo RETEAR proporcional: 1/3 no desktop, 50% no mobile
 ========================================================= */
-
-@font-face{
-  font-family:"FEITURA-ID";
-  src:url("../../assets/fonts/feitura.otf") format("opentype");
-  font-display:swap;
-}
 
 .page-feitura{
   --ft-olive:#394337;

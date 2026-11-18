@@ -1,8 +1,8 @@
-FONTE EXCLUSIVA DA FEITURA®
+FONTES IDENTITÁRIAS
 
-Coloque aqui o arquivo da fonte identitária com o nome:
+vmordekai.otf  → família "VMORDEKAI-ID"
+feitura.otf    → família "FEITURA-ID"
 
-  feitura.otf
-
-Ela é usada SOMENTE no wordmark (css/projetos/feitura.css, família "FEITURA-ID").
-Enquanto o arquivo não existir, o wordmark usa Libre Baskerville.
+Declaradas em css/core/fonts.css e usadas SOMENTE nos wordmarks
+(classes .wm-vmordekai e .wm-feitura). Corpo e interface seguem as
+fontes de cada ID visual.
