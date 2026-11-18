@@ -864,3 +864,99 @@
 @keyframes blink{
   50%{ opacity:0; }
 }
+
+/* =========================================================
+   CURRÍCULOS PARA DOWNLOAD (cartuchos retrô)
+========================================================= */
+
+.cv-section{
+  background:var(--brown-950);
+  color:var(--cream);
+}
+
+.cv-section .section-head p{
+  color:rgba(242,230,207,.72);
+}
+
+.cv-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+}
+
+.cv-cartridge{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  padding:3.2rem 2.2rem 2rem;
+  border-radius:var(--radius-m) var(--radius-m) var(--radius-l) var(--radius-l);
+  border:3px solid var(--brown-950);
+  box-shadow:8px 8px 0 rgba(0,0,0,.45);
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+
+.cv-cartridge:hover{
+  transform:translate(-4px,-4px);
+  box-shadow:12px 12px 0 rgba(0,0,0,.45);
+}
+
+.cv-slot{
+  position:absolute;
+  top:1rem;
+  left:2.2rem;
+  right:2.2rem;
+  height:10px;
+  border-radius:5px;
+  background:repeating-linear-gradient(90deg, rgba(0,0,0,.35) 0 6px, transparent 6px 12px);
+}
+
+.cv-moda{ background:var(--orange); color:var(--brown-950); }
+.cv-ti{ background:var(--petrol); color:var(--cream); }
+
+.cv-cartridge small{
+  font-family:var(--font-mono);
+  font-size:.7rem;
+  letter-spacing:.2rem;
+  opacity:.8;
+}
+
+.cv-cartridge h3{
+  font-family:var(--font-display);
+  text-transform:uppercase;
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  line-height:1;
+  margin:.8rem 0 .4rem;
+}
+
+.cv-area{
+  font-family:var(--font-mono);
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:.12rem;
+  text-transform:uppercase;
+}
+
+.cv-ti .cv-area{ color:var(--yellow); }
+
+.cv-cartridge p{
+  margin:1.2rem 0 1.8rem;
+  opacity:.85;
+  flex:1;
+}
+
+.cv-download{
+  align-self:flex-start;
+  padding:.8rem 1.3rem;
+  border-radius:var(--radius-pill);
+  background:var(--brown-950);
+  color:var(--yellow);
+  font-family:var(--font-mono);
+  font-size:.74rem;
+  font-weight:600;
+  letter-spacing:.14rem;
+  text-transform:uppercase;
+}
+
+@media (max-width:860px){
+  .cv-grid{ grid-template-columns:1fr; }
+}
